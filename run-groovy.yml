@@ -1,0 +1,19 @@
+name: Run Groovy script
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run Groovy tests
+        run: gradle --quiet --init-script scripts/main.groovy --init-script scripts/main_test.groovy help
