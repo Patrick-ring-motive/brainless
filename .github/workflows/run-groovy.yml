@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Groovy tests
-        run: gradle --quiet --init-script scripts/main.groovy --init-script scritps/main_test.groovy help
+        run: gradle --quiet --init-script scripts/main.groovy --init-script scripts/main_test.groovy help
