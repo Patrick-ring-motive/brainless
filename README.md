@@ -54,4 +54,4 @@ Run only runtime installation:
 
 `gradle --quiet --init-script scripts/main.groovy help`
 
-Both commands use runner-provided JVM and Gradle plus Gradle's bundled Groovy runtime. No standalone Groovy executable, setup action, build file, wrapper, or downloaded dependency is required.
+Both commands use runner-provided JVM and Gradle plus Gradle's bundled Groovy runtime. Minimal `settings.gradle` gives Gradle a valid root build across local and GitHub-hosted runners. No standalone Groovy executable, setup action, build script, wrapper, or downloaded dependency is required.
