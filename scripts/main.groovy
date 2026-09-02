@@ -50,6 +50,7 @@ class PainlessAugmentation {
 
     private static void installIterable() {
         List.metaClass.getLength = { -> delegate.size() }
+        ArrayList.metaClass.getLength = { -> delegate.size() }
 
         Iterable.metaClass.any = { Closure predicate ->
             for (def value : delegate) {
